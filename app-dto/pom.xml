@@ -11,5 +11,30 @@
 
     <artifactId>app-dto</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.changsheng.angel.dubhe</groupId>
+            <artifactId>dubhe-spring-boot-rest</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.changsheng.angel.dubhe</groupId>
+            <artifactId>dubhe-spring-boot-dto</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.changsheng.angel.app</groupId>
+            <artifactId>app-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>

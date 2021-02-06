@@ -11,5 +11,17 @@
 
     <artifactId>app-common</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.changsheng.angel.dubhe</groupId>
+            <artifactId>dubhe-spring-boot-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
+    </dependencies>
 </project>

@@ -6,7 +6,7 @@
 
     <parent>
         <groupId>com.changsheng.angel.dubhe</groupId>
-        <artifactId>parent</artifactId>
+        <artifactId>dubhe-spring-boot-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 

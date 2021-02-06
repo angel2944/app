@@ -13,9 +13,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.changsheng.angel.dubhe</groupId>
-            <artifactId>parent-controller</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>com.changsheng.angel.app</groupId>
+            <artifactId>app-service</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 
