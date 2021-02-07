@@ -26,7 +26,7 @@ public class GaodeSearchConfigurer {
     /**
      * 附近搜索url
      */
-    private String aroundUrl = "https://restapi.amap.com/v3/place/around?";
+    private String aroundUrl = "https://restapi.amap.com/v3/place/around";
 
     /**
      * 附近搜索关键词，多个用|隔开

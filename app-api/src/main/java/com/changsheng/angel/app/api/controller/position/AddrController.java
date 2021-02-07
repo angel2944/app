@@ -48,8 +48,12 @@ public class AddrController extends BaseController {
 
 
     @ApiOperation(value = "定位经纬度获取附近地址列表", notes = "定位经纬度获取附近地址列表")
-    @PostMapping("/listNearbyAddrByLatLon")
-    public RestResult<List<AddrBaseResponse>> listNearbyAddrByLatLon(@Validated @RequestBody LatLonRequest latLonRequest) {
+    @RequestMapping("/listNearbyAddrByLatLon")
+    public RestResult<List<AddrBaseResponse>> listNearbyAddrByLatLon() {
+        //location=116.473168,39.993015
+        LatLonRequest latLonRequest = new LatLonRequest();
+        latLonRequest.setLatitude("39.993015");
+        latLonRequest.setLongitude("116.473168");
         return success(addrService.listNearbyAddrByLatLon(latLonRequest));
 
     }

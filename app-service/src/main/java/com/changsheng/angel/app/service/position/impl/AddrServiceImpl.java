@@ -14,10 +14,13 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestTemplate;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 import java.util.List;
 
@@ -66,6 +69,24 @@ public class AddrServiceImpl implements AddrService {
         return Collections.emptyList();
     }
 
+    /**
+     * 自定restTemplate
+     */
+   /* private RestTemplate getRestTemplate(Integer timeOut) {
+        RestTemplate restTemplate = new RestTemplate();
+        restTemplate.getMessageConverters().set(1, new StringHttpMessageConverter(StandardCharsets.UTF_8));
+      //  restTemplate.getMessageConverters().add(new MappingJacksonHttpMessageConverter());
+        if (timeOut != null) {
+            SimpleClientHttpRequestFactory requestFactory = new SimpleClientHttpRequestFactory();
+            requestFactory.setConnectTimeout(1000);
+            requestFactory.setReadTimeout(timeOut);
+            restTemplate.setRequestFactory(requestFactory);
+        }
+        return restTemplate;
+}
+
+    */
+
 
     /**
      * 获取高德附近地址url
@@ -85,6 +106,6 @@ public class AddrServiceImpl implements AddrService {
         String types = gaodeSearchConfigurer.getAroundTypes();
         Integer radius = gaodeSearchConfigurer.getAroundRadius();
         return String.join("", aroundUrl, "?key=", key, "&output=json&keywords=", keywords,
-                "&types=", types, "&offset=", String.valueOf(arountSize), "&page=1&location=", longitude, ",", latitude, "&radius=", String.valueOf(radius), "&extensions=all");
+                "&offset=", String.valueOf(arountSize), "&page=1&location=", longitude, ",", latitude, "&radius=", String.valueOf(radius), "&extensions=all");
     }
 }
